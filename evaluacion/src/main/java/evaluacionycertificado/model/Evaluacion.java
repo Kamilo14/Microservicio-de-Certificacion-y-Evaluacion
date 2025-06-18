@@ -5,9 +5,12 @@ import java.sql.Date;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,10 +40,15 @@ public class Evaluacion {
 
     @Column(name = "curso_id", nullable = false)
     private Long cursoId;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "curso_id", insertable = false, updatable = false)
+    private Curso curso;
+}
 
     
 
 
 
 
-}
+
