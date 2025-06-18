@@ -27,11 +27,11 @@ public class CertificacionServiceTest {
 
     private Certificacion certificacion;
 
-    @BeforeEach
+     @BeforeEach
     public void setUp() {
         certificacion = new Certificacion(1L, "Certificado Java", "Backend",
                 Date.valueOf("2025-06-01"), Date.valueOf("2027-06-01"), "Curso intensivo",
-                1L, 1L, 1L);
+                1L, 1L, 1L,null,null);
     }
 
     @Test
