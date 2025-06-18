@@ -28,7 +28,7 @@ public class EvaluacionServiceTest {
     @BeforeEach
     public void setUp(){
         
-        evaluacion =new Evaluacion(1L, "Prueba Final", Date.valueOf("2025-06-10"), "30%", 1L);
+        evaluacion =new Evaluacion(1L, "Prueba Final", Date.valueOf("2025-06-10"), "30%", 1L,null);
 
     }
 
