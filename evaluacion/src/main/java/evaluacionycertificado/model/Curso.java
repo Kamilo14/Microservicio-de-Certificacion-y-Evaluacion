@@ -1,6 +1,10 @@
 package evaluacionycertificado.model;
 import java.util.Date;
 
+import org.hibernate.annotations.Immutable;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,6 +16,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Immutable
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 
 
 
