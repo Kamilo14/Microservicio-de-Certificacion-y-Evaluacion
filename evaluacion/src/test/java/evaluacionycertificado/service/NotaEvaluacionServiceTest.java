@@ -30,7 +30,7 @@ public class NotaEvaluacionServiceTest {
 
     @BeforeEach
     public void setUp(){
-        nota = new NotaEvaluacion(1L, 6.5f, 65, "Muy bien", 1L, 1L);
+        nota = new NotaEvaluacion(1L, 6.5f, 65, "Muy bien", 1L, 1L,null);
     }
 
     @Test
